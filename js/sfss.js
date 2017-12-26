@@ -6,27 +6,31 @@ var    current = 0;
 // Clear all images
 function reset() {
     for (var i = 0; i < sliderImages.length; i++) {
-        sliderImages[i].style.display = "none";
+        //sliderImages[i].style.display = "none";
+        sliderImages[i].style.opacity = "0";
     }
 }
 
 // Init slider
 function startSlide() {
     reset();
-    sliderImages[0].style.display = "block";
+    //sliderImages[0].style.display = "block";
+    sliderImages[0].style.opacity = "1";
 }
 
 // Show prev
 function slideLeft() {
     reset();
-    sliderImages[current - 1].style.display = "block";
+    //sliderImages[current - 1].style.display = "block";
+    sliderImages[current - 1].style.opacity = "1";
     current--;
 }
 
 // Show next
 function slideRight() {
     reset();
-    sliderImages[current + 1].style.display = "block";
+    //sliderImages[current + 1].style.display = "block";
+    sliderImages[current + 1].style.opacity = "1";
     current++;
 }
 
